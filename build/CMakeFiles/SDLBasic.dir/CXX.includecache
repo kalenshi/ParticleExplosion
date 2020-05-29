@@ -13,9 +13,7 @@ SDL2/SDL.h
 /home/kalenshi/CLionProjects/SDLBasic/main.cpp
 iostream
 -
-iomanip
--
-SDL2/SDL.h
+math.h
 -
 Screen.h
 /home/kalenshi/CLionProjects/SDLBasic/Screen.h
