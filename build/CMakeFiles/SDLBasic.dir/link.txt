@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/SDLBasic.dir/main.cpp.o CMakeFiles/SDLBasic.dir/Screen.cpp.o  -o SDLBasic  -lSDL2 

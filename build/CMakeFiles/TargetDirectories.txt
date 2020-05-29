@@ -1,0 +1,3 @@
+/home/kalenshi/CLionProjects/SDLBasic/build/CMakeFiles/rebuild_cache.dir
+/home/kalenshi/CLionProjects/SDLBasic/build/CMakeFiles/edit_cache.dir
+/home/kalenshi/CLionProjects/SDLBasic/build/CMakeFiles/SDLBasic.dir

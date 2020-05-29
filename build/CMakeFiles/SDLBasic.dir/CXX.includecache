@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kalenshi/CLionProjects/SDLBasic/Screen.h
+SDL2/SDL.h
+-
+
+/home/kalenshi/CLionProjects/SDLBasic/main.cpp
+iostream
+-
+iomanip
+-
+SDL2/SDL.h
+-
+Screen.h
+/home/kalenshi/CLionProjects/SDLBasic/Screen.h
+
