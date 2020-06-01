@@ -6,9 +6,21 @@
 
 #IncludeRegexTransform: 
 
+/home/kalenshi/CLionProjects/SDLBasic/Particles.cpp
+Particles.h
+/home/kalenshi/CLionProjects/SDLBasic/Particles.h
+stdlib.h
+-
+
+/home/kalenshi/CLionProjects/SDLBasic/Particles.h
+iostream
+-
+
 /home/kalenshi/CLionProjects/SDLBasic/Screen.h
 SDL2/SDL.h
 -
+
+/home/kalenshi/CLionProjects/SDLBasic/Swarm.h
 
 /home/kalenshi/CLionProjects/SDLBasic/main.cpp
 iostream
@@ -17,4 +29,6 @@ math.h
 -
 Screen.h
 /home/kalenshi/CLionProjects/SDLBasic/Screen.h
+Swarm.h
+/home/kalenshi/CLionProjects/SDLBasic/Swarm.h
 

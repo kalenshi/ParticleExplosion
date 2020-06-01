@@ -123,6 +123,33 @@ SDLBasic/fast:
 	$(MAKE) -f CMakeFiles/SDLBasic.dir/build.make CMakeFiles/SDLBasic.dir/build
 .PHONY : SDLBasic/fast
 
+Particles.o: Particles.cpp.o
+
+.PHONY : Particles.o
+
+# target to build an object file
+Particles.cpp.o:
+	$(MAKE) -f CMakeFiles/SDLBasic.dir/build.make CMakeFiles/SDLBasic.dir/Particles.cpp.o
+.PHONY : Particles.cpp.o
+
+Particles.i: Particles.cpp.i
+
+.PHONY : Particles.i
+
+# target to preprocess a source file
+Particles.cpp.i:
+	$(MAKE) -f CMakeFiles/SDLBasic.dir/build.make CMakeFiles/SDLBasic.dir/Particles.cpp.i
+.PHONY : Particles.cpp.i
+
+Particles.s: Particles.cpp.s
+
+.PHONY : Particles.s
+
+# target to generate assembly for a file
+Particles.cpp.s:
+	$(MAKE) -f CMakeFiles/SDLBasic.dir/build.make CMakeFiles/SDLBasic.dir/Particles.cpp.s
+.PHONY : Particles.cpp.s
+
 Screen.o: Screen.cpp.o
 
 .PHONY : Screen.o
@@ -149,6 +176,33 @@ Screen.s: Screen.cpp.s
 Screen.cpp.s:
 	$(MAKE) -f CMakeFiles/SDLBasic.dir/build.make CMakeFiles/SDLBasic.dir/Screen.cpp.s
 .PHONY : Screen.cpp.s
+
+Swarm.o: Swarm.cpp.o
+
+.PHONY : Swarm.o
+
+# target to build an object file
+Swarm.cpp.o:
+	$(MAKE) -f CMakeFiles/SDLBasic.dir/build.make CMakeFiles/SDLBasic.dir/Swarm.cpp.o
+.PHONY : Swarm.cpp.o
+
+Swarm.i: Swarm.cpp.i
+
+.PHONY : Swarm.i
+
+# target to preprocess a source file
+Swarm.cpp.i:
+	$(MAKE) -f CMakeFiles/SDLBasic.dir/build.make CMakeFiles/SDLBasic.dir/Swarm.cpp.i
+.PHONY : Swarm.cpp.i
+
+Swarm.s: Swarm.cpp.s
+
+.PHONY : Swarm.s
+
+# target to generate assembly for a file
+Swarm.cpp.s:
+	$(MAKE) -f CMakeFiles/SDLBasic.dir/build.make CMakeFiles/SDLBasic.dir/Swarm.cpp.s
+.PHONY : Swarm.cpp.s
 
 main.o: main.cpp.o
 
@@ -186,9 +240,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... SDLBasic"
+	@echo "... Particles.o"
+	@echo "... Particles.i"
+	@echo "... Particles.s"
 	@echo "... Screen.o"
 	@echo "... Screen.i"
 	@echo "... Screen.s"
+	@echo "... Swarm.o"
+	@echo "... Swarm.i"
+	@echo "... Swarm.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

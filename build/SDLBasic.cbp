@@ -80,10 +80,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/kalenshi/CLionProjects/SDLBasic/Particles.cpp">
+			<Option target="SDLBasic"/>
+		</Unit>
+		<Unit filename="/home/kalenshi/CLionProjects/SDLBasic/Particles.h">
+			<Option target="SDLBasic"/>
+		</Unit>
 		<Unit filename="/home/kalenshi/CLionProjects/SDLBasic/Screen.cpp">
 			<Option target="SDLBasic"/>
 		</Unit>
 		<Unit filename="/home/kalenshi/CLionProjects/SDLBasic/Screen.h">
+			<Option target="SDLBasic"/>
+		</Unit>
+		<Unit filename="/home/kalenshi/CLionProjects/SDLBasic/Swarm.cpp">
+			<Option target="SDLBasic"/>
+		</Unit>
+		<Unit filename="/home/kalenshi/CLionProjects/SDLBasic/Swarm.h">
 			<Option target="SDLBasic"/>
 		</Unit>
 		<Unit filename="/home/kalenshi/CLionProjects/SDLBasic/main.cpp">

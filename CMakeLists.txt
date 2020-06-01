@@ -5,5 +5,5 @@ set(CMAKE_CXX_STANDARD 11)
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIR})
 
-add_executable(SDLBasic main.cpp Screen.cpp Screen.h)
+add_executable(SDLBasic main.cpp Screen.cpp Screen.h Particles.cpp Particles.h Swarm.cpp Swarm.h)
 target_link_libraries(SDLBasic ${SDL2_LIBRARY} -lSDL2)

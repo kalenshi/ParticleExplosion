@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/SDLBasic.dir/main.cpp.o CMakeFiles/SDLBasic.dir/Screen.cpp.o  -o SDLBasic  -lSDL2 
+/usr/bin/c++  -g   CMakeFiles/SDLBasic.dir/main.cpp.o CMakeFiles/SDLBasic.dir/Screen.cpp.o CMakeFiles/SDLBasic.dir/Particles.cpp.o CMakeFiles/SDLBasic.dir/Swarm.cpp.o  -o SDLBasic  -lSDL2 
