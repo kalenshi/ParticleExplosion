@@ -7,9 +7,11 @@ CMakeFiles/SDLBasic.dir/Particles.cpp.o: ../Particles.h
 CMakeFiles/SDLBasic.dir/Screen.cpp.o: ../Screen.cpp
 CMakeFiles/SDLBasic.dir/Screen.cpp.o: ../Screen.h
 
+CMakeFiles/SDLBasic.dir/Swarm.cpp.o: ../Particles.h
 CMakeFiles/SDLBasic.dir/Swarm.cpp.o: ../Swarm.cpp
 CMakeFiles/SDLBasic.dir/Swarm.cpp.o: ../Swarm.h
 
+CMakeFiles/SDLBasic.dir/main.cpp.o: ../Particles.h
 CMakeFiles/SDLBasic.dir/main.cpp.o: ../Screen.h
 CMakeFiles/SDLBasic.dir/main.cpp.o: ../Swarm.h
 CMakeFiles/SDLBasic.dir/main.cpp.o: ../main.cpp
