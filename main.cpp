@@ -1,13 +1,18 @@
 #include <iostream>
 #include <math.h>
 #include "Screen.h"
+#include "Swarm.h"
+
 
 using namespace std;
 
 int main(int argc, char *argv[]) {
+
+    srand(time(NULL));
+
     sdl::Screen screen;
     if (!screen.init()) {
-        std::cout << "Error Initializing SDL. " << std::endl;
+        cout << "Error Initializing SDL. " << endl;
     }
 
     while (true) {

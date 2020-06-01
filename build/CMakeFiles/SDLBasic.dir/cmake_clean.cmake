@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/SDLBasic.dir/Particles.cpp.o"
   "CMakeFiles/SDLBasic.dir/Screen.cpp.o"
+  "CMakeFiles/SDLBasic.dir/Swarm.cpp.o"
   "CMakeFiles/SDLBasic.dir/main.cpp.o"
   "SDLBasic"
   "SDLBasic.pdb"

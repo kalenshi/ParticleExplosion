@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/kalenshi/CLionProjects/SDLBasic/Particles.cpp" "/home/kalenshi/CLionProjects/SDLBasic/build/CMakeFiles/SDLBasic.dir/Particles.cpp.o"
   "/home/kalenshi/CLionProjects/SDLBasic/Screen.cpp" "/home/kalenshi/CLionProjects/SDLBasic/build/CMakeFiles/SDLBasic.dir/Screen.cpp.o"
+  "/home/kalenshi/CLionProjects/SDLBasic/Swarm.cpp" "/home/kalenshi/CLionProjects/SDLBasic/build/CMakeFiles/SDLBasic.dir/Swarm.cpp.o"
   "/home/kalenshi/CLionProjects/SDLBasic/main.cpp" "/home/kalenshi/CLionProjects/SDLBasic/build/CMakeFiles/SDLBasic.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
