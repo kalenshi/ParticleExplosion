@@ -9,11 +9,10 @@
 
 namespace sdl {
     struct Particles {
-    private:
         double x_coord;
         double y_coord;
     public:
-        Particles(double x, double y);
+        Particles();
 
         virtual ~Particles() {};
 

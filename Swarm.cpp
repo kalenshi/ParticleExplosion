@@ -6,6 +6,10 @@
 
 namespace sdl {
     Swarm::Swarm() {
+        particles = new Particles[NPARTICLES];
+    }
 
+    Swarm::~Swarm() {
+        delete [] particles;
     }
 }
