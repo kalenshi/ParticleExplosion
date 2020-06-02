@@ -10,6 +10,13 @@ namespace sdl {
     }
 
     Swarm::~Swarm() {
-        delete [] particles;
+        delete[] particles;
+    }
+
+    void Swarm::update() {
+        //loop through all the particles
+        for (int i = 0; i < Swarm::NPARTICLES; i++) {
+            this->particles[i].update();
+        }
     }
 }

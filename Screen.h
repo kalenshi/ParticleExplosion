@@ -26,6 +26,7 @@ namespace sdl {
         bool init();
 
         void close();
+        void clear();
 
         void update();
 
