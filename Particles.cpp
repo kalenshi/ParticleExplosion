@@ -8,9 +8,8 @@
 
 namespace sdl {
 
-    Particles::Particles() {
-        x_coord = ((2.0 * rand()) / RAND_MAX) - 1;
-        y_coord = ((2.0 * rand()) / RAND_MAX) - 1;
+    Particles::Particles(): x_coord(0),y_coord(0){
+
     }
 
     void Particles::update() {
