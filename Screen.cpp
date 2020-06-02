@@ -94,5 +94,9 @@ namespace sdl {
         SDL_RenderCopy(this->m_renderer, this->m_texture, NULL, NULL);
         SDL_RenderPresent(this->m_renderer);
     }
+
+    void Screen::clear() {
+        memset(this->m_buffer, 0, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(Uint32));
+    }
 }
 
