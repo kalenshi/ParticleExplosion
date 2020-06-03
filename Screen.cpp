@@ -18,7 +18,7 @@ namespace sdl {
     }
 
     sdl::Screen::Screen() : m_window(NULL), m_renderer(NULL), m_texture(NULL), m_surface(NULL),
-                            m_buffer(NULL) {
+                            m_buffer(NULL), m_buffer2(NULL) {
 
     }
 
@@ -50,13 +50,16 @@ namespace sdl {
         }
 
         this->m_buffer = new Uint32[Screen::SCREEN_WIDTH * Screen::SCREEN_HEIGHT];
+        this->m_buffer2 = new Uint32[Screen::SCREEN_WIDTH * Screen::SCREEN_HEIGHT];
 
         memset(this->m_buffer, 0, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(Uint32));
+        memset(this->m_buffer2, 0, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(Uint32));
         return true;
     }
 
     void sdl::Screen::close() {
         delete[] this->m_buffer;
+        delete[] this->m_buffer2;
         SDL_DestroyRenderer(this->m_renderer);
         SDL_DestroyTexture(this->m_texture);
         SDL_DestroyWindow(this->m_window);
@@ -89,14 +92,56 @@ namespace sdl {
     }
 
     void Screen::update() {
-        SDL_UpdateTexture(this->m_texture, NULL, this->m_buffer, SCREEN_WIDTH * sizeof(Uint32));
+        SDL_UpdateTexture(this->m_texture, NULL, this->m_buffer, Screen::SCREEN_WIDTH * sizeof(Uint32));
         SDL_RenderClear(this->m_renderer);
         SDL_RenderCopy(this->m_renderer, this->m_texture, NULL, NULL);
         SDL_RenderPresent(this->m_renderer);
     }
 
-    void Screen::clear() {
-        memset(this->m_buffer, 0, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(Uint32));
+
+    void Screen::boxBlur() {
+        Uint32 *tmp = this->m_buffer;
+        this->m_buffer = this->m_buffer2;
+        this->m_buffer2 = tmp;
+
+        for (int y = 0; y < Screen::SCREEN_HEIGHT; y++) {
+            for (int x = 0; x < Screen::SCREEN_WIDTH; x++) {
+                /*
+                 * 0 0 0
+                 * 0 1 0
+                 * 0 0 0
+                 */
+                int redTotal = 0;
+                int greenTotal = 0;
+                int blueTotal = 0;
+
+                for (int row = -1; row <= 1; row++) {
+                    for (int col = -1; col <= 1; col++) {
+                        int currentX = x + col;
+                        int currentY = y + row;
+
+                        if (currentX >= 0 && currentX < Screen::SCREEN_WIDTH && currentY >= 0 &&
+                            currentY < Screen::SCREEN_HEIGHT) {
+                            Uint32 color = this->m_buffer2[currentY * Screen::SCREEN_WIDTH + currentX];
+                            Uint8 red = color >> 24;
+                            Uint8 green = color >> 16;
+                            Uint8 blue = color >> 8;
+
+                            redTotal += red;
+                            greenTotal += green;
+                            blueTotal += blue;
+                        }
+                    }
+                }
+                Uint8 red = redTotal / 9;
+                Uint8 green = greenTotal / 9;
+                Uint8 blue = blueTotal / 9;
+
+                this->setPixel(x, y, red, green, blue);
+            }
+
+        }
+
     }
 }
 
