@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
         //update particles
         //draw particles
         int elapsed = SDL_GetTicks();
-        screen.clear();
+
         swarm.update(elapsed);
 
         unsigned char red = (unsigned char) (1 + sin(elapsed * 0.0001)) * 128;
@@ -35,6 +35,8 @@ int main(int argc, char *argv[]) {
             int y = particle.y_coord  * sdl::Screen::SCREEN_WIDTH / 2 + sdl::Screen::SCREEN_HEIGHT / 2;
             screen.setPixel(x, y, red, green, blue);
         }
+
+        screen.boxBlur();
 
         //Draw the screen
         screen.update();

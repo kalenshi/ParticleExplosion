@@ -11,8 +11,8 @@
 namespace sdl {
     class Screen {
     public:
-        const static int SCREEN_WIDTH = 600;
-        const static int SCREEN_HEIGHT = 800;
+        const static int SCREEN_WIDTH = 1500;
+        const static int SCREEN_HEIGHT = 900;
 
     private:
         SDL_Window *m_window;
@@ -20,13 +20,13 @@ namespace sdl {
         SDL_Texture *m_texture;
         SDL_Surface *m_surface;
         Uint32 *m_buffer;
+        Uint32 *m_buffer2;
     public:
         Screen();
 
         bool init();
 
         void close();
-        void clear();
 
         void update();
 
@@ -35,6 +35,7 @@ namespace sdl {
         void setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue);
 
 
+        void boxBlur();
     };
 }
 
