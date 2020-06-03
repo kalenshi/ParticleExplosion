@@ -3,26 +3,24 @@
 //
 
 #include "Particles.h"
+#include <math.h>
 #include <stdlib.h>
 
 
 namespace sdl {
 
-    Particles::Particles() {
-        x_coord = ((2.0 * rand()) / RAND_MAX) - 1;
-        y_coord = ((2.0 * rand()) / RAND_MAX) - 1;
+    Particles::Particles() : x_coord(0), y_coord(0) {
+        direction = (2 * M_PI * rand()) / RAND_MAX;
+        speed = (0.001 * rand()) / RAND_MAX;
+
     }
 
-    void Particles::update() {
-        this->x_coord += XSPEED;
-        this->y_coord += YSPEED;
+    void Particles::update(int interval) {
+        double xspeed = speed * cos(direction);
+        double yspeed = speed * sin(direction);
 
-        if (this->x_coord < -1.0 || this->x_coord >= 1.0) {
-            XSPEED = -XSPEED;
-        }
-        if (this->y_coord < -1.0 || this->y_coord >= 1.0) {
-            YSPEED = -YSPEED;
-        }
+        this->x_coord += xspeed * interval;
+        this->y_coord += yspeed * interval;
     }
 
     Particles::~Particles() {

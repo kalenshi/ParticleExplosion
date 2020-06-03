@@ -12,13 +12,15 @@ namespace sdl {
         double x_coord;
         double y_coord;
 
-        double XSPEED = 0.001 * (((2.0 * rand()) / RAND_MAX) - 1);
-        double YSPEED= 0.001 * (((2.0 * rand()) / RAND_MAX) - 1);
+        double speed;
+        double direction;
 
     public:
         Particles();
-        void update();
-        virtual ~Particles() ;
+
+        void update(int interval);
+
+        virtual ~Particles();
 
     };
 }

@@ -10,15 +10,16 @@
 namespace sdl {
     class Swarm {
     public:
-        const static int NPARTICLES = 1000;
+        const static int NPARTICLES = 5000;
     private:
         Particles *particles;
+        int lastTime;
     public:
         Swarm();
 
         const Particles *const getParticles() { return particles; }
 
-        virtual void update();
+        virtual void update(int elapsed);
 
         virtual ~Swarm();
     };

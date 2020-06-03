@@ -5,7 +5,7 @@
 #include "Swarm.h"
 
 namespace sdl {
-    Swarm::Swarm() {
+    Swarm::Swarm() : lastTime(0) {
         particles = new Particles[NPARTICLES];
     }
 
@@ -13,10 +13,11 @@ namespace sdl {
         delete[] particles;
     }
 
-    void Swarm::update() {
-        //loop through all the particles
+    void Swarm::update(int elapsed) {
+        int interval = elapsed - this->lastTime;
         for (int i = 0; i < Swarm::NPARTICLES; i++) {
-            this->particles[i].update();
+            this->particles[i].update(interval);
         }
+        this->lastTime = elapsed;
     }
 }
