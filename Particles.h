@@ -11,7 +11,7 @@ namespace sdl {
     struct Particles {
         double x_coord;
         double y_coord;
-
+    private:
         double speed;
         double direction;
 
@@ -22,6 +22,8 @@ namespace sdl {
 
         virtual ~Particles();
 
+    private:
+        void init();
     };
 }
 
